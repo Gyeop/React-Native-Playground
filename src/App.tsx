@@ -1,6 +1,7 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
-import CustomText from './components/CustomText';
+import {StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import RootStack from './navigator';
 
 const styles = StyleSheet.create({
   container: {flex: 1},
@@ -9,13 +10,9 @@ const styles = StyleSheet.create({
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.flexBox}>
-        <CustomText center fontSize={14}>
-          React Native Playground
-        </CustomText>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <RootStack />
+    </NavigationContainer>
   );
 };
 
